@@ -1,0 +1,119 @@
+---
+// 这是 Astro 的头部，用于写逻辑，现在暂时不用动
+---
+
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>GoodView's Blog</title>
+	</head>
+	<body>
+		<!-- 导航栏 -->
+		<nav>
+			<div class="logo">GoodView</div>
+			<div class="links">
+				<a href="/">首页</a>
+				<a href="/blog">文章</a>
+				<a href="/projects">项目</a>
+			</div>
+		</nav>
+
+		<!-- 头部展示区 -->
+		<header>
+			<h1>Where I build, break, and write.</h1>
+			<p>A developer's digital garden. 代码、随笔与未完成的作品。</p>
+		</header>
+
+		<!-- 作品展示区 -->
+		<section class="projects">
+			<h2>我的项目</h2>
+			<div class="card">
+				<h3>My First Project</h3>
+				<p>这是我最新的项目介绍。点击查看详情。</p>
+				<a href="https://github.com/GoodView-12" target="_blank">前往 GitHub →</a>
+			</div>
+			<!-- 以后可以复制上面的 .card 增加更多项目 -->
+		</section>
+	</body>
+</html>
+
+<style>
+	/* 这里是你赋予博客个性的地方 */
+	:root {
+		--bg-color: #f9f9f9;
+		--text-color: #333;
+		--accent-color: #0070f3; /* 主色调，你可以改成你喜欢的颜色 */
+	}
+
+	body {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		background-color: var(--bg-color);
+		color: var(--text-color);
+		margin: 0;
+		padding: 0;
+		line-height: 1.6;
+	}
+
+	/* 导航栏样式 */
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 40px;
+		background: white;
+		border-bottom: 1px solid #eaeaea;
+	}
+	nav .logo {
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+	nav .links a {
+		margin-left: 20px;
+		text-decoration: none;
+		color: var(--text-color);
+	}
+	nav .links a:hover {
+		color: var(--accent-color);
+	}
+
+	/* 头部展示区样式 */
+	header {
+		text-align: center;
+		padding: 80px 20px;
+	}
+	header h1 {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+	}
+	header p {
+		font-size: 1.2rem;
+		color: #666;
+	}
+
+	/* 项目卡片样式 */
+	.projects {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 40px 20px;
+	}
+	.card {
+		background: white;
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+		margin-bottom: 20px;
+		transition: transform 0.2s ease;
+	}
+	.card:hover {
+		transform: translateY(-5px);
+	}
+	.card h3 {
+		margin-top: 0;
+	}
+	.card a {
+		color: var(--accent-color);
+		text-decoration: none;
+		font-weight: 500;
+	}
+</style>
